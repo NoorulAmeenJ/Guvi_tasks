@@ -1,0 +1,23 @@
+Window object [Browser Object Model (BOM)] − It is the outmost element of the object hierarchy.
+Inside the object , there will be a document
+It displays the contents of the webpage
+It is the very first object that is loaded in the browser.
+We can access the window from the window only. i.e. window.window
+the window object is part of only BOM , and not DOM
+ syntax
+ window.propertyname
+example :
+ window.innerHeight : will return the height of the content area of the browser
+
+
+
+
+Document object[ DOM - Document Object Model ] − Each HTML document that gets loaded into a window becomes a document object. The document contains the contents of the page.
+After loading of the window, a document of html will get ready to loaded
+ All the tags, elements with attributes in HTML are part of the document.
+ We can access the document from a window using the window. document
+ The document is a part of both DOM and BOM
+  syntax
+  document.propertyname
+   example 
+       document.title :  will return the title of the document
