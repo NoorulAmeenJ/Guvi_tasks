@@ -1,0 +1,36 @@
+Write a blog on Difference between HTTP1.1 vs HTTP2
+ Hypertext Transfer Protocol
+   HTTP1
+ It is human readable
+ This  is a textual format
+ It compresses data by itself
+ 
+ HTTP2
+ It is not human readable, becauseit wraps the HTTP
+ There is a binary framing Layer
+ It uses HPACK for data compression
+ HTTP2 Is Faster Than HTTP1.1
+ HTTP2 is fully multiplexed, instead of ordered and blocking
+
+
+Write a blog about objects and its internal representation in Javascript
+  example 
+   var resume = {
+    name : "noorul",
+    profession : "  IT",
+   }
+
+it is  a key: value pair
+console.log(resume.name))  it will give noorul
+
+Javascript Object Notation (JSON)
+ for this, the key also should be in "" 
+
+ In JavaScript, almost "everything" is an object
+
+Booleans , it will zero or one , true or false
+Numbers can be objects it will return 1,2,3,4,
+Strings can be objects , it will be in double quotes r single quotes , like 'arun' , 'noorul'
+Arrays are always objects , it will be like [], what ever inside this symbol, will be in double r single quotes 
+Functions  objects , it will be () , arrow functions =>
+Objects are always objects  , it will be like { key : value pair }
