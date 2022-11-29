@@ -24,18 +24,21 @@
 // resume[0].Address= 'dindigul' // replace existing element
 // console.log(resume[0])
 // console.log(resume[0].Qualifications)
+------------------------------------------
 //                        //for loop
  for(i=0;i<resume[0].Qualifications.length;i++) 
  {   console.log(resume[0].Qualifications[i]) 
  }  
-
-             //for in ,normal for loop aditii[index] is looping 
+-------------------------------------------
+             //for in  is to print  for 'key' &'value' ,normal for loop aditii[index] is looping 
+// how many entries are ther e, v can find
 for (var aditi in resume) // i gave aditi ,bacause for my clarity
 {
   console.log(aditi,resume[aditi].Name) Or
     console.log(resume[aditi].Name)
 
 }
+-------------------------------------------------------
     //for of is for 'value' , with th help of - index is looping 
 for (var aditi of resume) // i gave noorul ,bacause for my clarity
 {
@@ -43,6 +46,7 @@ for (var aditi of resume) // i gave noorul ,bacause for my clarity
   console.log(aditi.Name)
 
 }
+-------------------------------------------------------------
 var i = 0
 
 resume.forEach( (a) => {
@@ -84,7 +88,7 @@ screen properties width and height are the full screen
 Screen is a small information object about physical screen dimensions . 
 It can be used to display screen width, height, colorDepth, pixelDepth etc. 
 It is not mandatory to write window prefix with screen object. It can be written without window prefix.
-
+---------------------------------------------------
 
 
                                      My own resume in JSON format
