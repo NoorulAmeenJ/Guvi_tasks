@@ -1,0 +1,38 @@
+how to compare JSON objects have the same property without the order
+var  obj1 = {name : 'person 2', age:'5'};
+ obj2 = {age:'5',name : 'person 2'} 
+ if(JSON.stringify(obj1)=== JSON.stringify(obj2))
+ {   console.log('y'); }
+ else
+ {    console.log('n');   }
+------------------------------------
+2.To print all the country flags in console
+var noorul = new XMLHttpRequest();
+//console.log(noorul);
+ 
+            noorul.open('GET','https://restcountries.com/v3.1/all')
+            noorul.send()
+            noorul.onload= () => {
+var ameen = noorul.response 
+ //console.log(ameen) good , but in order 
+    var taj = JSON.parse(ameen)
+  //    console.log(taj)
+    //  console.log(taj[0].name)
+
+for (i=0;i<taj.length;i++)
+ {
+    console.log(taj[i].name,taj[i].flag)
+  
+}
+
+for(var i in taj)
+{
+    console.log(i,taj[i].name.common, taj[i].flag)
+}
+------------------------------------
+3. names , regions ,subregion, and populations
+
+for(var i in taj)
+{
+    console.log(i,taj[i].name.common,taj[i].region,taj[i].subregion ,taj[i].population)
+}
