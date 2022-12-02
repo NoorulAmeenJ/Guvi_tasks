@@ -1,0 +1,47 @@
+var noorul = new XMLHttpRequest();
+noorul.open('GET','https://restcountries.com/v3.1/all');
+noorul.send();
+noorul.onload = function()
+{
+    var data=  noorul.response;
+     var saman = JSON.parse(data);
+ console.log(saman)}
+
+ / Get all the countries from the Asia continent /region using the Filter function
+  var a = saman.filter((aa)=> aa.region =='Asia' && aa.region == 'Asia')
+ var aa = a.map((a)=> a.name.common)
+ (50) ['Maldives', 'Pakistan', 'Malaysia', 'Uzbekistan', 'Singapore', 'Qatar', 'Kazakhstan', 'Bahrain', 'India',
+  'Macau', 'Syria', 'Kyrgyzstan', 'Palestine', 'Timor-Leste', 'Taiwan', 'South Korea', 'Iraq', 'Cambodia', 
+  'Sri Lanka', 'Israel', 'Tajikistan', 'Azerbaijan', 'Georgia', 'China', 'Thailand', 'Indonesia', 'Turkmenistan',
+   'Turkey', 'Iran', 'Lebanon', 'Philippines', 'Kuwait', 'Oman', 'Afghanistan', 'Armenia', 'Bangladesh', 'Laos',
+    'Nepal', 'Myanmar', 'United Arab Emirates', 'Bhutan', 'Jordan', 'Vietnam', 'Brunei', 'Japan', 
+ 'Hong Kong', 'Saudi Arabia', 'North Korea', 'Mongolia', 'Yemen']
+ ---------------------------------------------------------
+// Get all the countries with a population of less than 2 lakhs using Filter function
+       var a = saman.filter((aa)=> aa.population<200000)
+            var aa = a.map((a)=> a.name.common)
+(62) ['Aruba', 'Wallis and Futuna', 'Åland Islands', 'Pitcairn Islands', 'Seychelles', 
+'French Southern and Antarctic Lands', 'Christmas Island', 'Saint Martin', 'Heard Island and McDonald Islands',
+ 'Antarctica', 'Greenland', 'British Indian Ocean Territory', 'Saint Lucia', 'Niue', 'Saint Barthélemy',
+ 'Grenada', 'Isle of Man', 'Curaçao', 'Dominica', 'Faroe Islands', 'Montserrat', 'Cook Islands', 'Bermuda',
+ 'San Marino', 'Cayman Islands', 'Cocos (Keeling) Islands', 'United States Virgin Islands', 'Norfolk Island',
+'Nauru', 'Bouvet Island', 'Micronesia', 'American Samoa', 'Anguilla', 'Marshall Islands', 'Kiribati', 
+ 'Northern Mariana Islands', 'Guam', 'Gibraltar', 'Vatican City', 'Jersey', 'Tuvalu', 'Saint Helena, 
+ Ascension and Tristan da Cunha', 'Samoa', 'Guernsey', 'Tonga', 'Saint Kitts and Nevis', 'Falkland Islands',
+'Palau', 'Turks and Caicos Islands', 'British Virgin Islands', 'Liechtenstein', 'Andorra', 'Tokelau',
+ 'Sint Maarten', 'United States Minor Outlying Islands', 'Antigua and Barbuda', 'Saint Pierre and Miquelon', 
+ 'Saint Vincent and the Grenadines', 'South Georgia', 'Caribbean Netherlands', 'Monaco', 'Svalbard and Jan Mayen']
+  -------------------------------------------------------------------
+// Print the following details name, capital, flag using forEach function 
+    var a = saman.forEach((a)=> console.log(`${a.flag}-${a.name.common}-${a.capital}`))
+    ------------------------------------------------------------------------------------------
+// Print the total population of countries using reduce function
+      var a = saman.reduce((acc,cv)=> acc+cv.population,0)
+                    console.log(a)
+-------------------------------------------------------------------------------
+// Print the country which uses US Dollars as currency
+ in rest countries , 2
+          var aa = saman.filter((a)=> a.currencies)
+         var aaa = aa.filter((a)=> a.currencies[0].symbol=='$')
+        var aq = aaa.map((a)=> a.name)
+           console.log(aq)
