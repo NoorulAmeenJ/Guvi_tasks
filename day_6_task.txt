@@ -1,0 +1,57 @@
+1). Movie
+     class Movie{
+  
+          constructor(hero,heroine,rr){
+            this.Hero = hero;
+            this.Heroine = heroine;
+            if(rr == undefined)
+            {
+              this.rating= 'PG'
+            }
+            else
+            {
+              this.rating = rr
+            }
+           get
+            
+            }
+   
+  }
+     var cinema1 = new Movie('vijay','joo')
+     var cinema2 = new Movie('ajith','sha','6')
+     var cinema3 = new Movie('surya','taman')
+     var cinema4 = new Movie('sk','priyan','8')
+          console.log(cinema1,cinema2,cinema3,cinema4)         
+-------------------------------------------------------------------
+3).Write a “person” class to hold all the details.
+class Person{
+  constructor(ggender,ssalary,aage,nname){
+    this.Name = nname;
+    this.age = aage;
+    this.salary = ssalary;
+    this.gender = ggender;
+    }
+    }
+    
+    var noorul = new Person('male','26500','21','male')
+    console.log(noorul.salary)
+     console.log(noorul.Name)        
+---------------------------------------------------------
+4). Uber Price 
+ class Uber{
+  
+          constructor(distance,rate,waitingtime){
+            this.distance = distance;
+            this.rate = rate;
+            this.waitingtime=waitingtime
+            }
+          getPrice()
+          {
+            var price = (this.distance+this.rate) + (this.waitingtime*2)  
+            return price
+          }
+   
+  }
+     var uberprice= new Uber(20,150,10)
+    
+          console.log(uberprice.getPrice())
